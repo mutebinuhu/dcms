@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <title>My Blog in laravel</title>
+    <title>DRY CLEANERS MS</title>
 </head>
 <body class="bg-gray-200">
     <nav class="flex justify-between font-bold mb-4 bg-white py-6">
@@ -14,7 +14,7 @@
             <li><a href="{{route('home')}}" class="p-3">Home</a></li>
             <li><a href="{{route('dashboard')}}" class="p-3">Dashboard</a></li>
             <li><a href="" class="p-3"></a>Post</li>
-            <li><a href="" class="p-3"></a>Customers</li>
+            <li><a href="{{route('customers.index')}}" class="p-3">Customers</a></li>
         </ul>
         <ul class="flex items-center">
             @auth
