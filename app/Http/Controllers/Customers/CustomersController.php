@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Customers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Customer;
+use Illuminate\Support\Facades\DB;
 class CustomersController extends Controller
 {
     /**
@@ -15,7 +16,8 @@ class CustomersController extends Controller
     public function index()
     {
         //
-        return view('customers.index');
+        $customers = DB::table('customers')->get();
+        return view('customers.index', ['customers'=>$customers])->with('status', 'customer added to the system');
     }
 
     /**
