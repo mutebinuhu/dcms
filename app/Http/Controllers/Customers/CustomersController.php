@@ -17,7 +17,7 @@ class CustomersController extends Controller
     {
         //
         $customers = DB::table('customers')->get();
-        return view('customers.index', ['customers'=>$customers])->with('status', 'customer added to the system');
+        return view('customers.index', ['customers'=>$customers]);
     }
 
     /**
@@ -51,7 +51,7 @@ class CustomersController extends Controller
             'email'=>$request->email,
             'area'=>$request->area
         ]);
-        return back();
+        return redirect()->route('customers.index')->with('status', 'Customer added to the system');
 
     }
 
