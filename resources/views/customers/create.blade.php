@@ -3,7 +3,7 @@
 @section('content')
    <div class="flex justify-center">
         <div class="w-8/12  bg-white p-6 rounded-lg ">
-            <div class="flex justify-between mb-5">
+            <div class="flex justify-between mb-5 border-b py-5">
             	<div>
             		<h2>Add Customers</h2>
             	</div>
