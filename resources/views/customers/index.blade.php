@@ -7,11 +7,11 @@
                 <p class="py-3 font-bold text-lg text-white text-center bg-green-500">{{session('status')}}</p>
 
             @endif
-            <div class="flex justify-between">
+            <div class="flex justify-between mt-7">
             	<div>
-            		<h2>Customers List</h2>
+            		<h2 class="text-lg">Customers List</h2>
             	</div>
-            	<div class="mt-7">
+            	<div class="">
             		<a class="bg-blue-400 py-2 px-6 text-white" href="{{route('customers.create')}}">Add Customer</a>
             	</div>
             </div>
@@ -32,12 +32,15 @@
                 <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Mobile</span>0{{$customer->phone}}</td>
                 <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
                     <span class="inline-block w-1/3 md:hidden font-bold">Actions</span>
-                      <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-2 border border-green-500 rounded">View</button>
+                      <a class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-2 border border-green-500 rounded" href="{{route('customers.show', $customer->id)}}">View</a>
                     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">Edit</button>
                     <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded">Delete</button>
                 </td>
             </tr> 
-           @endforeach         
+           @endforeach  
+          <div class="mt-5">
+               {{$customers->links()}}     
+          </div>  
         </tbody>
     </table>
             

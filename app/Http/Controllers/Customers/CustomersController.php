@@ -16,7 +16,7 @@ class CustomersController extends Controller
     public function index()
     {
         //
-        $customers = DB::table('customers')->get();
+        $customers = Customer::paginate(5);
         return view('customers.index', ['customers'=>$customers]);
     }
 
@@ -64,6 +64,7 @@ class CustomersController extends Controller
     public function show($id)
     {
         //
+        return view('customers.show', ['customer'=>Customer::findOrFail($id)]);
     }
 
     /**
