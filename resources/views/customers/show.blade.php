@@ -1,6 +1,14 @@
 @extends('layouts.app')
 @section('content')
-    <div class="flex justify-center">
+  
+   <div class="wholebody">
+   <div class="flex justify-center mb-5 hidden modal relative">
+    <div class="w-8/12  bg-white p-6 rounded-lg  absolute top-48">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quibusdam sed repellat mollitia quod sapiente vel nesciunt ducimus quasi est asperiores dolor voluptates, veritatis temporibus rem. Magnam quod a assumenda.
+        </div>  
+    </div>
+   <div>
+        <div class="flex justify-center">
         <div class="w-8/12  bg-white p-6 rounded-lg ">
             <div class="md:flex justify-between">
                 <div class="w-full border py-2 px-2 rounded md:w-1/2 md:flex justify-between">
@@ -13,8 +21,8 @@
                         <p class="font-bold">Location: <span class="text-blue-500">{{$customer->area}}</span></p>
                         <p class="font-bold">Tel: <span class="text-blue-500">0{{$customer->phone}}</span></p>
                     </div>
-                    <div class="mt-2 ">
-                        <a href="" class="py-2 px-3 text-white bg-green-500">Add</a>
+                    <div class="mt-2 add_cloth_button">
+                        <button class="py-2 px-3 text-white bg-green-500">Add</button> 
                     </div>
                 </div>
                  <div class="ml-2">
@@ -38,4 +46,6 @@
             </div>
         </div>
     </div>
+        </div>
+   </div>
 @endsection

@@ -33,5 +33,6 @@
         </ul>
     </nav>
         @yield('content')
+<script src="{{ asset('js/application.js') }}"></script>
 </body>
 </html>
