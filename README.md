@@ -1,7 +1,7 @@
 
 ## About DCMS
 
-This is a drycleaner management that im developing in laravel:
+This is a drycleaner management system that im developing in laravel:
 
 
 
